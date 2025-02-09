@@ -143,12 +143,12 @@
 
   <build>
     <plugins>
-      <plugin>
-        <artifactId>maven-checkstyle-plugin</artifactId>
-        <configuration>
-          <enabled>false</enabled>
-        </configuration>
-      </plugin>
+<!--      <plugin>-->
+<!--        <artifactId>maven-checkstyle-plugin</artifactId>-->
+<!--        <configuration>-->
+<!--          <enabled>false</enabled>-->
+<!--        </configuration>-->
+<!--      </plugin>-->
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>

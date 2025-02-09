@@ -362,40 +362,40 @@
             <skip>true</skip>
           </configuration>
         </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-checkstyle-plugin</artifactId>
-          <version>${maven-checkstyle-plugin.version}</version>
-          <configuration>
-            <enabled>false</enabled>
-            <consoleOutput>false</consoleOutput>
-            <failOnViolation>true</failOnViolation>
-            <violationSeverity>info</violationSeverity>
-            <includeTestSourceDirectory>true</includeTestSourceDirectory>
-            <configLocation>build-config/checkstyle.xml</configLocation>
-          </configuration>
-          <dependencies>
-            <dependency>
-              <groupId>com.adobe.testing</groupId>
-              <artifactId>s3mock-build-config</artifactId>
-              <version>${project.version}</version>
-            </dependency>
-            <dependency>
-              <groupId>com.puppycrawl.tools</groupId>
-              <artifactId>checkstyle</artifactId>
-              <version>${checkstyle.version}</version>
-            </dependency>
-          </dependencies>
-          <executions>
-            <execution>
-              <id>check-style</id>
-              <goals>
-                <goal>check</goal>
-              </goals>
-              <phase>validate</phase>
-            </execution>
-          </executions>
-        </plugin>
+<!--        <plugin>-->
+<!--          <groupId>org.apache.maven.plugins</groupId>-->
+<!--          <artifactId>maven-checkstyle-plugin</artifactId>-->
+<!--          <version>${maven-checkstyle-plugin.version}</version>-->
+<!--          <configuration>-->
+<!--            <enabled>false</enabled>-->
+<!--            <consoleOutput>false</consoleOutput>-->
+<!--            <failOnViolation>true</failOnViolation>-->
+<!--            <violationSeverity>info</violationSeverity>-->
+<!--            <includeTestSourceDirectory>true</includeTestSourceDirectory>-->
+<!--            <configLocation>build-config/checkstyle.xml</configLocation>-->
+<!--          </configuration>-->
+<!--          <dependencies>-->
+<!--            <dependency>-->
+<!--              <groupId>com.adobe.testing</groupId>-->
+<!--              <artifactId>s3mock-build-config</artifactId>-->
+<!--              <version>${project.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--              <groupId>com.puppycrawl.tools</groupId>-->
+<!--              <artifactId>checkstyle</artifactId>-->
+<!--              <version>${checkstyle.version}</version>-->
+<!--            </dependency>-->
+<!--          </dependencies>-->
+<!--          <executions>-->
+<!--            <execution>-->
+<!--              <id>check-style</id>-->
+<!--              <goals>-->
+<!--                <goal>check</goal>-->
+<!--              </goals>-->
+<!--              <phase>validate</phase>-->
+<!--            </execution>-->
+<!--          </executions>-->
+<!--        </plugin>-->
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>${maven-clean-plugin.version}</version>
