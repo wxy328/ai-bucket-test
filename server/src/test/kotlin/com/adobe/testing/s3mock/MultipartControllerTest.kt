@@ -51,7 +51,10 @@ import java.util.Date
     classes = [KmsKeyStore::class, ObjectService::class, ObjectController::class, BucketController::class]
   )
 )
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(
+  properties = ["com.adobe.testing.s3mock.contextPath="],
+  webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT
+)
 internal class MultipartControllerTest : BaseControllerTest() {
   @MockBean
   private lateinit var bucketService: BucketService

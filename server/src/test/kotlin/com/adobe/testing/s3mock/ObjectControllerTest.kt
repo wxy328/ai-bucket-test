@@ -71,7 +71,10 @@ import java.util.UUID
     classes = [KmsKeyStore::class, MultipartService::class, BucketController::class, MultipartController::class]
   )
 )
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(
+  properties = ["com.adobe.testing.s3mock.contextPath="],
+  webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT
+)
 internal class ObjectControllerTest : BaseControllerTest() {
   @MockBean
   private lateinit var objectService: ObjectService

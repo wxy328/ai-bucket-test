@@ -41,7 +41,7 @@ import java.time.Instant
 
 @MockBean(classes = [KmsKeyStore::class, ObjectService::class, MultipartService::class, MultipartStore::class])
 @SpringBootTest(
-  properties = ["com.adobe.testing.s3mock.contextPath=s3-mock"],
+  properties = ["com.adobe.testing.s3mock.contextPath=/ai_bucket"],
   webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT
 )
 internal class ContextPathObjectStoreControllerTest : BaseControllerTest() {
@@ -66,7 +66,7 @@ internal class ContextPathObjectStoreControllerTest : BaseControllerTest() {
       this.contentType = MediaType.APPLICATION_XML
     }
     val response = restTemplate.exchange(
-      "/s3-mock/",
+      "/ai_bucket/",
       HttpMethod.GET,
       HttpEntity<Any>(headers),
       String::class.java

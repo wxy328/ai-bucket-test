@@ -86,7 +86,7 @@ internal class BucketControllerTest : BaseControllerTest() {
       this.contentType = MediaType.APPLICATION_XML
     }
     val response = restTemplate.exchange(
-      "/",
+      "/ai_bucket/",
       HttpMethod.GET,
       HttpEntity<Any>(headers),
       String::class.java
@@ -106,7 +106,7 @@ internal class BucketControllerTest : BaseControllerTest() {
       this.contentType = MediaType.APPLICATION_XML
     }
     val response = restTemplate.exchange(
-      "/",
+      "/ai_bucket/",
       HttpMethod.GET,
       HttpEntity<Any>(headers),
       String::class.java
@@ -124,7 +124,7 @@ internal class BucketControllerTest : BaseControllerTest() {
       this.contentType = MediaType.APPLICATION_XML
     }
     val response = restTemplate.exchange(
-      "/test-bucket",
+      "/ai_bucket/test-bucket",
       HttpMethod.HEAD,
       HttpEntity<Any>(headers),
       String::class.java
@@ -142,7 +142,7 @@ internal class BucketControllerTest : BaseControllerTest() {
       this.contentType = MediaType.APPLICATION_XML
     }
     val response = restTemplate.exchange(
-      "/test-bucket",
+      "/ai_bucket/test-bucket",
       HttpMethod.GET,
       HttpEntity<Any>(headers),
       String::class.java
@@ -157,7 +157,7 @@ internal class BucketControllerTest : BaseControllerTest() {
       this.contentType = MediaType.APPLICATION_XML
     }
     val response = restTemplate.exchange(
-      "/test-bucket",
+      "/ai_bucket/test-bucket",
       HttpMethod.PUT,
       HttpEntity<Any>(headers),
       String::class.java
@@ -175,7 +175,7 @@ internal class BucketControllerTest : BaseControllerTest() {
       this.contentType = MediaType.APPLICATION_XML
     }
     val response = restTemplate.exchange(
-      "/test-bucket",
+      "/ai_bucket/test-bucket",
       HttpMethod.PUT,
       HttpEntity<Any>(headers),
       String::class.java
@@ -195,7 +195,7 @@ internal class BucketControllerTest : BaseControllerTest() {
       this.contentType = MediaType.APPLICATION_XML
     }
     val response = restTemplate.exchange(
-      "/test-bucket",
+      "/ai_bucket/test-bucket",
       HttpMethod.DELETE,
       HttpEntity<Any>(headers),
       String::class.java
@@ -214,7 +214,7 @@ internal class BucketControllerTest : BaseControllerTest() {
       this.contentType = MediaType.APPLICATION_XML
     }
     val response = restTemplate.exchange(
-      "/test-bucket",
+      "/ai_bucket/test-bucket",
       HttpMethod.DELETE,
       HttpEntity<Any>(headers),
       String::class.java
@@ -244,7 +244,7 @@ internal class BucketControllerTest : BaseControllerTest() {
       this.contentType = MediaType.APPLICATION_XML
     }
     val response = restTemplate.exchange(
-      "/test-bucket",
+      "/ai_bucket/test-bucket",
       HttpMethod.DELETE,
       HttpEntity<Any>(headers),
       String::class.java
@@ -265,7 +265,7 @@ internal class BucketControllerTest : BaseControllerTest() {
       this.contentType = MediaType.APPLICATION_XML
     }
     val response = restTemplate.exchange(
-      "/test-bucket",
+      "/ai_bucket/test-bucket",
       HttpMethod.DELETE,
       HttpEntity<Any>(headers),
       String::class.java
@@ -288,7 +288,7 @@ internal class BucketControllerTest : BaseControllerTest() {
       this.contentType = MediaType.APPLICATION_XML
     }
     val maxKeysUri = UriComponentsBuilder
-      .fromUriString("/test-bucket")
+      .fromUriString("/ai_bucket/test-bucket")
       .queryParam(AwsHttpParameters.MAX_KEYS, maxKeys.toString())
       .build()
       .toString()
@@ -302,7 +302,7 @@ internal class BucketControllerTest : BaseControllerTest() {
     assertThat(maxKeysResponse.body).isEqualTo(MAPPER.writeValueAsString(from(S3Exception.INVALID_REQUEST_MAXKEYS)))
 
     val encodingTypeUri = UriComponentsBuilder
-      .fromUriString("/test-bucket")
+      .fromUriString("/ai_bucket/test-bucket")
       .queryParam(AwsHttpParameters.ENCODING_TYPE, encodingtype)
       .build()
       .toString()
@@ -332,7 +332,7 @@ internal class BucketControllerTest : BaseControllerTest() {
       this.contentType = MediaType.APPLICATION_XML
     }
     val maxKeysUri = UriComponentsBuilder
-      .fromUriString("/test-bucket")
+      .fromUriString("/ai_bucket/test-bucket")
       .queryParam("list-type", "2")
       .queryParam(AwsHttpParameters.MAX_KEYS, maxKeys.toString())
       .build().toString()
@@ -347,7 +347,7 @@ internal class BucketControllerTest : BaseControllerTest() {
       .isEqualTo(MAPPER.writeValueAsString(from(S3Exception.INVALID_REQUEST_MAXKEYS)))
 
     val encodingTypeUri = UriComponentsBuilder
-      .fromUriString("/test-bucket")
+      .fromUriString("/ai_bucket/test-bucket")
       .queryParam(AwsHttpParameters.ENCODING_TYPE, encodingtype)
       .queryParam("list-type", "2")
       .build().toString()
@@ -374,7 +374,7 @@ internal class BucketControllerTest : BaseControllerTest() {
       this.contentType = MediaType.APPLICATION_XML
     }
     val response = restTemplate.exchange(
-      "/test-bucket/",
+      "/ai_bucket/test-bucket/",
       HttpMethod.GET,
       HttpEntity<Any>(headers),
       String::class.java
@@ -394,7 +394,7 @@ internal class BucketControllerTest : BaseControllerTest() {
       this.contentType = MediaType.APPLICATION_XML
     }
     val uri = UriComponentsBuilder
-      .fromUriString("/test-bucket/")
+      .fromUriString("/ai_bucket/test-bucket/")
       .queryParam("list-type", "2")
       .build()
       .toString()
@@ -427,7 +427,7 @@ internal class BucketControllerTest : BaseControllerTest() {
       this.contentType = MediaType.APPLICATION_XML
     }
     val response = restTemplate.exchange(
-      "/test-bucket",
+      "/ai_bucket/test-bucket",
       HttpMethod.GET,
       HttpEntity<Any>(headers),
       String::class.java
@@ -457,7 +457,7 @@ internal class BucketControllerTest : BaseControllerTest() {
       this.contentType = MediaType.APPLICATION_XML
     }
     val uri = UriComponentsBuilder
-      .fromUriString("/test-bucket")
+      .fromUriString("/ai_bucket/test-bucket")
       .queryParam("list-type", "2")
       .build()
       .toString()
@@ -484,7 +484,7 @@ internal class BucketControllerTest : BaseControllerTest() {
       this.contentType = MediaType.APPLICATION_XML
     }
     val uri = UriComponentsBuilder
-      .fromUriString("/test-bucket")
+      .fromUriString("/ai_bucket/test-bucket")
       .queryParam(AwsHttpParameters.OBJECT_LOCK, "ignored")
       .build()
       .toString()
@@ -514,7 +514,7 @@ internal class BucketControllerTest : BaseControllerTest() {
       this.contentType = MediaType.APPLICATION_XML
     }
     val uri = UriComponentsBuilder
-      .fromUriString("/test-bucket")
+      .fromUriString("/ai_bucket/test-bucket")
       .queryParam(AwsHttpParameters.OBJECT_LOCK, "ignored")
       .build()
       .toString()
@@ -552,7 +552,7 @@ internal class BucketControllerTest : BaseControllerTest() {
       this.contentType = MediaType.APPLICATION_XML
     }
     val uri = UriComponentsBuilder
-      .fromUriString("/test-bucket")
+      .fromUriString("/ai_bucket/test-bucket")
       .queryParam(AwsHttpParameters.LIFECYCLE, "ignored")
       .build()
       .toString()
@@ -593,7 +593,7 @@ internal class BucketControllerTest : BaseControllerTest() {
       this.contentType = MediaType.APPLICATION_XML
     }
     val uri = UriComponentsBuilder
-      .fromUriString("/test-bucket")
+      .fromUriString("/ai_bucket/test-bucket")
       .queryParam(AwsHttpParameters.LIFECYCLE, "ignored")
       .build()
       .toString()
