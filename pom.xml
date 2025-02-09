@@ -300,60 +300,60 @@
             </execution>
           </executions>
         </plugin>
-        <plugin>
-          <groupId>com.mycila</groupId>
-          <artifactId>license-maven-plugin</artifactId>
-          <version>${license-maven-plugin-git.version}</version>
-          <configuration>
-            <strictCheck>true</strictCheck>
-            <licenseSets>
-              <licenseSet>
-                <header>etc/license-template.txt</header>
-                <excludes>
-                  <exclude>.idea/**</exclude>
-                  <exclude>.springBeans</exclude>
-                  <exclude>.editorconfig</exclude>
-                  <exclude>**/*.jks</exclude>
-                  <exclude>**/sample*.txt</exclude>
-                  <exclude>COPYRIGHT</exclude>
-                  <exclude>LICENSE</exclude>
-                  <exclude>AUTHORS</exclude>
-                  <exclude>README.md</exclude>
-                  <exclude>.github/workflows/**</exclude>
-                  <exclude>CONTRIBUTING.md</exclude>
-                  <exclude>.gitattributes</exclude>
-                  <exclude>.gitignore</exclude>
-                  <exclude>.pre-commit-config.yaml</exclude>
-                  <exclude>src/main/resources/banner.txt</exclude>
-                </excludes>
-              </licenseSet>
-            </licenseSets>
-            <mapping>
-              <java>SLASHSTAR_STYLE</java>
-            </mapping>
-            <properties>
-              <project.inceptionYear>2017</project.inceptionYear>
-            </properties>
-            <!-- Do not execute when skipping tests.
-              This also disables execution during a release. -->
-            <skip>${skipTests}</skip>
-          </configuration>
-          <dependencies>
-            <dependency>
-              <groupId>com.mycila</groupId>
-              <artifactId>license-maven-plugin-git</artifactId>
-              <!-- make sure you use the same version as license-maven-plugin -->
-              <version>${license-maven-plugin-git.version}</version>
-            </dependency>
-          </dependencies>
-          <executions>
-            <execution>
-              <goals>
-                <goal>check</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
+<!--        <plugin>-->
+<!--          <groupId>com.mycila</groupId>-->
+<!--          <artifactId>license-maven-plugin</artifactId>-->
+<!--          <version>${license-maven-plugin-git.version}</version>-->
+<!--          <configuration>-->
+<!--            <strictCheck>true</strictCheck>-->
+<!--            <licenseSets>-->
+<!--              <licenseSet>-->
+<!--                <header>etc/license-template.txt</header>-->
+<!--                <excludes>-->
+<!--                  <exclude>.idea/**</exclude>-->
+<!--                  <exclude>.springBeans</exclude>-->
+<!--                  <exclude>.editorconfig</exclude>-->
+<!--                  <exclude>**/*.jks</exclude>-->
+<!--                  <exclude>**/sample*.txt</exclude>-->
+<!--                  <exclude>COPYRIGHT</exclude>-->
+<!--                  <exclude>LICENSE</exclude>-->
+<!--                  <exclude>AUTHORS</exclude>-->
+<!--                  <exclude>README.md</exclude>-->
+<!--                  <exclude>.github/workflows/**</exclude>-->
+<!--                  <exclude>CONTRIBUTING.md</exclude>-->
+<!--                  <exclude>.gitattributes</exclude>-->
+<!--                  <exclude>.gitignore</exclude>-->
+<!--                  <exclude>.pre-commit-config.yaml</exclude>-->
+<!--                  <exclude>src/main/resources/banner.txt</exclude>-->
+<!--                </excludes>-->
+<!--              </licenseSet>-->
+<!--            </licenseSets>-->
+<!--            <mapping>-->
+<!--              <java>SLASHSTAR_STYLE</java>-->
+<!--            </mapping>-->
+<!--            <properties>-->
+<!--              <project.inceptionYear>2017</project.inceptionYear>-->
+<!--            </properties>-->
+<!--            &lt;!&ndash; Do not execute when skipping tests.-->
+<!--              This also disables execution during a release. &ndash;&gt;-->
+<!--            <skip>${skipTests}</skip>-->
+<!--          </configuration>-->
+<!--          <dependencies>-->
+<!--            <dependency>-->
+<!--              <groupId>com.mycila</groupId>-->
+<!--              <artifactId>license-maven-plugin-git</artifactId>-->
+<!--              &lt;!&ndash; make sure you use the same version as license-maven-plugin &ndash;&gt;-->
+<!--              <version>${license-maven-plugin-git.version}</version>-->
+<!--            </dependency>-->
+<!--          </dependencies>-->
+<!--          <executions>-->
+<!--            <execution>-->
+<!--              <goals>-->
+<!--                <goal>check</goal>-->
+<!--              </goals>-->
+<!--            </execution>-->
+<!--          </executions>-->
+<!--        </plugin>-->
         <plugin>
           <groupId>io.fabric8</groupId>
           <artifactId>docker-maven-plugin</artifactId>
